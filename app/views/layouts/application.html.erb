@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinterest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div class="container">
+  <%= link_to "New Pin", "#", class: "btn btn-default", data: {toggle: "modal", target: "#newPinModal"} %>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="newPinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id="pin-form">
+        <%= render partial: 'pins/form' %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= yield %>
+
+</body>
+</html>

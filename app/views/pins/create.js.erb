@@ -1,0 +1,10 @@
+<% if @pin.errors.any? %>
+  $("#pin-form").html("<%= j render partial: 'pins/form' %>");
+<% else %>
+
+
+  $("#newPinModal").modal("hide");
+  $("#pins").html("<%= j render partial: 'pins/pins' %>");
+  $("#pin-form").html("<%= j render partial: 'pins/form' %>");
+
+<% end %>
