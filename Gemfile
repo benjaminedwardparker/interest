@@ -47,5 +47,4 @@ gem 'rails_12factor', group: :production
 gem 'simple_form', '3.1.0.rc2'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'remotipart', '~> 1.2'
-gem 'pg'
 ruby '2.0.0'
