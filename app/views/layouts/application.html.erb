@@ -6,15 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<% if user_signed_in? %>
-  <p>Glad to have you here, <%= current_user.email %>!</p>
-  <%= button_to "Sign Out", destroy_user_session_path, method: "delete", class: "btn btn default" %>
-<% end %>
+<body
+  <% if !user_signed_in? %>
+  style="margin: 0;background: url('http://i.imgur.com/H4e3dMi.jpg');background-size: 1440px 800px;"
+  <% end %>
+>
 <div class="container">
-  <%= link_to "New Pin", "#", class: "btn btn-default", data: {toggle: "modal", target: "#newPinModal"} %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+    <p>Glad to have you here, <%= current_user.email %>!</p>
+    <%= button_to "Sign Out", destroy_user_session_path, method: "delete", class: "btn btn default", style: "float:right"%>
+  <% end %>
+</div>
+<div class="container">
 
 
   <!-- Modal -->

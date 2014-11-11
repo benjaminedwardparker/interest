@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pins/index'
+  get 'pages/home'
 
   devise_for :users
 
