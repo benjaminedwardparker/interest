@@ -1,5 +1,24 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
 // body {
 //      margin: 0;
 //      background: url('http://www.byron-bay-beaches.com/images/ocean-scene-paradise.jpg');
